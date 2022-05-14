@@ -130,3 +130,5 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # SHELL_PLUS_PRINT_SQL = True
+
+FIXTURE_DIRS = ["./fixtures/yaml"]

@@ -1,0 +1,15 @@
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$320000$Z7fUx6Z3diphBxyRY66X6P$23kUUeb79s3hz2qflObjcbE6sv4p8nmzi0tv1HE1s+8= #secret1secret
+    last_login: 2022-04-23 22:36:37.434945+00:00
+    is_superuser: true
+    username: admin
+    first_name: 'Django'
+    last_name: 'Admin'
+    email: admin@gmail.com
+    is_staff: true
+    is_active: true
+    date_joined: 2022-04-23 22:35:48.562975+00:00
+    groups: []
+    user_permissions: []
