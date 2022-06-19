@@ -10,10 +10,10 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Action Information
-      run: echo "Project name: $PROJECT_NAME"
-      run: echo "Event name: ${{github.event_name}}"
-      run: echo "Repository: ${{github.repository}}"
-      run: echo "Workspace: ${{github.workspace}}"
+      run: echo "Project name = $PROJECT_NAME"
+           echo "Event name = ${{github.event_name}}"
+           echo "Repository = ${{github.repository}}"
+           echo "Workspace = ${{github.workspace}}"
 
     - name: Install Python3 
       uses: actions/setup-python@v3
@@ -24,4 +24,4 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run Django Tests
-      run: python manage.py tests
+      run: python backend/manage.py test
