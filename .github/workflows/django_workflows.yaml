@@ -1,0 +1,27 @@
+name: django-workflow-example
+on: [push]
+env:
+  PROJECT_NAME: Django Select Prefetch Example
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Action Information
+      run: echo "Project name: $PROJECT_NAME"
+      run: echo "Event name: ${{github.event_name}}"
+      run: echo "Repository: ${{github.repository}}"
+      run: echo "Workspace: ${{github.workspace}}"
+
+    - name: Install Python3 
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+
+    - name: Install Dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run Django Tests
+      run: python manage.py tests
